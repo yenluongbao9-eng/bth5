@@ -1,0 +1,26 @@
+﻿<Window x:Class="bth5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bth5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="BÁO CÁO THỐNG KÊ (DỊCH VỤ SOA - BTHSOA)" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                <Button Content="Xem Báo Cáo Tổng Quan" Click="BtnTongQuan_Click" Width="170" Height="35" Margin="0,0,10,0"/>
+                <Button Content="Xem Báo Cáo Sản Phẩm" Click="BtnSanPham_Click" Width="170" Height="35" Margin="0,0,10,0"/>
+                <Button Content="Xem Báo Cáo Đơn Hàng" Click="BtnDonHang_Click" Width="170" Height="35"/>
+            </StackPanel>
+
+            <Border BorderBrush="#CCCCCC" BorderThickness="1" Padding="10" Background="#F9F9F9">
+                <TextBox x:Name="txtKetQua" Height="280" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" 
+                 IsReadOnly="True" FontSize="14" FontFamily="Consolas"
+                 Text="Bấm các nút phía trên để gọi dữ liệu từ dịch vụ BTHSOA (http://localhost:5050)..."/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
